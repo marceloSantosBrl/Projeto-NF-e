@@ -1,0 +1,42 @@
+/* You can add global styles to this file, and also import other style files */
+@import "primeicons/primeicons.css";
+@import "primeng/resources/themes/mdc-dark-deeppurple/theme.css";
+@import "primeng/resources/primeng.css";
+body {
+  font-family: var(--font-family);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  3. Allow percentage-based heights in the application
+*/
+html, body {
+  height: 100%;
+}
+
+.p-card {
+  border-radius: 14px !important;
+}
+
+.btn-green {
+  background-color: green;
+}
+
+.btn {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 0.5rem;
+}
+
+.btn:active {
+  filter: brightness(0.7);
+}
