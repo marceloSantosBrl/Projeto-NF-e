@@ -1,0 +1,39 @@
+<p-table
+  [value]="data"
+  [paginator]="true"
+  [rows]="10"
+  [tableStyle]="{ 'min-width': '50rem' }"
+  sortMode="multiple"
+  currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} produtos"
+  styleClass="p-datatable-sm"
+  [rowsPerPageOptions]="[10, 25, 50]"
+>
+  <ng-template pTemplate="header">
+    <tr>
+      <th pSortableColumn="products">
+        Produtos <p-sortIcon field="products"></p-sortIcon>
+      </th>
+      <th pSortableColumn="amount">
+        Quantidade <p-sortIcon field="amount"></p-sortIcon>
+      </th>
+      <th pSortableColumn="brand">
+        Marca <p-sortIcon field="brand"></p-sortIcon>
+      </th>
+      <th pSortableColumn="value">
+        Valor <p-sortIcon field="value"></p-sortIcon>
+      </th>
+      <th pSortableColumn="nfeAmount">
+        NF-e <p-sortIcon field="nfeAmount"></p-sortIcon>
+      </th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-data>
+    <tr>
+      <td>{{ data.products }}</td>
+      <td>{{ data.amount }}</td>
+      <td>{{ data.brand }}</td>
+      <td>{{ data.value }}</td>
+      <td>{{ data.nfeAmount }}</td>
+    </tr>
+  </ng-template>
+</p-table>
