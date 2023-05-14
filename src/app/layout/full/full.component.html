@@ -1,8 +1,12 @@
-<div class="menu-bar">
-  <p-menubar [model]="items">
-    <ng-template pTemplate="start">
-      <img src="../../../assets/logo.svg" class="logo-container" alt="logo"/>
-    </ng-template>
-  </p-menubar>
+<div class="screen-container">
+  <div class="menu-bar">
+    <p-menubar [model]="items">
+      <ng-template pTemplate="start">
+        <img src="../../../assets/logo.svg" class="logo-container" alt="logo"/>
+      </ng-template>
+    </p-menubar>
+  </div>
+  <div class="main-container">
+    <ng-content></ng-content>
+  </div>
 </div>
-<ng-content></ng-content>
