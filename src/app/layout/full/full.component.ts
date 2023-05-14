@@ -34,7 +34,7 @@ export class FullComponent {
         icon: 'pi pi-fw pi-shopping-cart'
       },
       {
-        label: 'Configuração',
+        label: 'Configurações',
         icon: 'pi pi-fw pi-cog',
         items: [
           {
