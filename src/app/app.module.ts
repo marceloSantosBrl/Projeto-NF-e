@@ -5,10 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import {FullComponent} from "./layout/full/full.component";
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {HomeCardComponent} from "./components/home/home-card/home-card.component";
-import {HomeTableComponent} from "./components/home/home-table/home-table.component";
-import {HomeComponent} from "./pages/home/home.component";
-
+import {InventorySalesComponent} from "./pages/inventory-sales/inventory-sales.component";
+import {InventoryTotalComponent} from "./pages/inventory-total/inventory-total.component";
+import { InventoryReversalsComponent } from './pages/inventory-reversals/inventory-reversals.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,9 +17,9 @@ import {HomeComponent} from "./pages/home/home.component";
     AppRoutingModule,
     FullComponent,
     BrowserAnimationsModule,
-    HomeCardComponent,
-    HomeTableComponent,
-    HomeComponent
+    InventorySalesComponent,
+    InventoryTotalComponent,
+    InventoryReversalsComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

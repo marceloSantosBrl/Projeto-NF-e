@@ -1,0 +1,24 @@
+<p-table [value]="data" [tableStyle]="{ 'min-width': '50rem' }" styleClass="p-datatable-sm">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Produto</th>
+      <th>Marca</th>
+      <th>Unidades Vendidas</th>
+      <th>Valor Total</th>
+      <th>Vendedor</th>
+      <th>Data da Transação</th>
+      <th>Código da Transação</th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+    <tr>
+      <td>{{ product.product }}</td>
+      <td>{{ product.brand }}</td>
+      <td>{{ product.unitiesSold }}</td>
+      <td>{{ product.totalValue }}</td>
+      <td>{{ product.responsible }}</td>
+      <td>{{ product.transactionDate | date: 'd/M/yyyy' }}</td>
+      <td>{{ product.transactionCode }}</td>
+    </tr>
+  </ng-template>
+</p-table>

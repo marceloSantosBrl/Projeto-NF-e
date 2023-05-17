@@ -1,0 +1,30 @@
+<p-table
+  [value]="data"
+  [tableStyle]="{ 'min-width': '50rem' }"
+  [paginator]="true"
+  [rows]="10"
+  [showCurrentPageReport]="true"
+  [rowsPerPageOptions]="[10, 25, 50]"
+  currentPageReportTemplate="Mostrando {first} a {last} de um total de {totalRecords} entradas"
+  styleClass="p-datatable-sm"
+  sortMode="multiple"
+>
+  <ng-template pTemplate="header">
+    <tr>
+        <th pSortableColumn="value">Valor <p-sortIcon field="value"></p-sortIcon></th>
+        <th pSortableColumn="saleCode">Código da venda <p-sortIcon field="saleCode"></p-sortIcon></th>
+        <th pSortableColumn="saleDate">Data da venda<p-sortIcon field="saleDate"></p-sortIcon></th>
+        <th pSortableColumn="reversalDate">Data do extorno<p-sortIcon field="reversalDate"></p-sortIcon></th>
+        <th pSortableColumn="nfeCode">Código da Nfe<p-sortIcon field="nfeCode"></p-sortIcon></th>
+    </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-product>
+    <tr>
+      <td>{{ product.value }}</td>
+      <td>{{ product.saleCode }}</td>
+      <td>{{ product.saleDate | date : "dd/M/yyyy" }}</td>
+      <td>{{ product.reversalDate | date : "dd/M/yyyy" }}</td>
+      <td>{{ product.nfeCode }}</td>
+    </tr>
+  </ng-template>
+</p-table>

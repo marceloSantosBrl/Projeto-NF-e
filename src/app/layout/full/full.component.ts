@@ -39,7 +39,12 @@ export class FullComponent {
         items: [
           {
             label: 'Remove',
-            icon: 'pi pi-fw pi-calendar-minus'
+            icon: 'pi pi-fw pi-calendar-minus',
+            items: [{
+              label: 'Configurações',
+              icon: 'pi pi-fw pi-cog',
+              tooltipPosition: 'right',
+            }]
           }
         ]
       }
