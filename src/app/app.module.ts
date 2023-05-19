@@ -8,19 +8,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {InventorySalesComponent} from "./pages/inventory-sales/inventory-sales.component";
 import {InventoryTotalComponent} from "./pages/inventory-total/inventory-total.component";
 import { InventoryReversalsComponent } from './pages/inventory-reversals/inventory-reversals.component';
+import {HomeComponent} from "./pages/home/home.component";
 @NgModule({
   declarations: [
     AppComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    FullComponent,
-    BrowserAnimationsModule,
-    InventorySalesComponent,
-    InventoryTotalComponent,
-    InventoryReversalsComponent
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        FullComponent,
+        BrowserAnimationsModule,
+        InventorySalesComponent,
+        InventoryTotalComponent,
+        InventoryReversalsComponent,
+        HomeComponent
+    ],
   providers: [],
   bootstrap: [AppComponent]
 })

@@ -10,3 +10,10 @@
   flex-grow: 1;
   overflow-y: scroll;
 }
+
+.end-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}

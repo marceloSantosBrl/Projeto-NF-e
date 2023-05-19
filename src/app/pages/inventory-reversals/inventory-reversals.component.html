@@ -1,4 +1,22 @@
 <app-full>
-    <app-tab-menu></app-tab-menu>
+  <div class="header-container">
+    <h1>Estornos Realizados</h1>
+    <div class="header-buttons-container">
+    </div>
+  </div>
+  <p-card>
+    <div class="table-header-container">
+      <div class="left-table-header">
+        <span class="p-input-icon-left">
+            <i class="pi pi-search"></i>
+            <input type="text" pInputText placeholder="Pesquisar Estorno"/>
+        </span>
+        <button pButton pRipple class="p-button-secondary">Filtrar Estornos</button>
+        <p-button icon="pi pi-refresh" label="Atualizar tabela"></p-button>
+      </div>
+      <button pButton pRipple class="p-button-primary">Cadastrar Estorno</button>
+      <button pButton pRipple class="p-button-danger">Cancelar Estorno</button>
+    </div>
     <app-reversal-table></app-reversal-table>
+  </p-card>
 </app-full>

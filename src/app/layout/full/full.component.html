@@ -1,8 +1,11 @@
 <div class="screen-container">
   <div class="menu-bar">
     <p-menubar [model]="items">
-      <ng-template pTemplate="start">
-        <img src="../../../assets/logo.svg" class="logo-container" alt="logo"/>
+      <ng-template pTemplate="end">
+        <div class="end-container">
+          <p-menu #menu [model]="configurationItems" [popup]="true"></p-menu>
+          <button pButton type="button" (click)="menu.toggle($event)" icon="pi pi-cog"></button>
+        </div>
       </ng-template>
     </p-menubar>
   </div>
