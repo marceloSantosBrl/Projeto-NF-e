@@ -29,16 +29,21 @@ export class FullComponent implements OnInit{
         label: 'Estoques',
         icon: 'pi pi-fw pi-truck',
         items: [
-          {label: 'Cadastrar estoque'},
-          {label: 'Estorno de mercadorias'}
+          {label: 'Cadastrar Produto', routerLink: '/cadastro-produto'},
+          {label: 'Listagem de Estoque'},
         ]
       },
       {
-        label: 'Clientes',
-        icon: 'pi pi-fw pi-users'
+        label: 'Pessoas',
+        icon: 'pi pi-fw pi-users',
+        items: [
+          {label: 'Clientes'},
+          {label: 'Fornecedores'},
+          {label: 'Vendedores'},
+        ]
       },
       {
-        label: 'Notas',
+        label: 'Financeiro',
         icon: 'pi pi-file',
       },
       {

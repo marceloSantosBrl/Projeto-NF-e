@@ -1,0 +1,350 @@
+<form (ngSubmit)="handleSubmit()" [formGroup]="form">
+  <div class="form-button">
+    <p-accordion [activeIndex]="0">
+      <p-accordionTab header="Informações Básicas">
+        <div class="container-basico">
+          <div>
+            <label for="nome">Nome</label>
+            <input
+              type="text"
+              id="nome"
+              formControlName="nome"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="tipo">Tipo</label>
+            <p-dropdown
+              id="tipo"
+              [options]="Tipo"
+              optionLabel="tipo"
+              class="p-inputtext-sm"
+            ></p-dropdown>
+          </div>
+          <div>
+            <label for="precoDeVenda">Preço de venda</label>
+            <div class="p-inputgroup">
+              <input  placeholder="0,00"
+              type="number"
+              id="precoDeVenda"
+              formControlName="precoDeVenda"
+              pInputText
+              class="p-inputtext-sm"/>
+              <span class="p-inputgroup-addon"> R$ </span>
+            </div>
+          </div>
+          <div>
+            <label for="marca">Marca</label>
+            <input
+              type="text"
+              id="marca"
+              formControlName="marca"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="unidade">Unidade</label>
+            <p-dropdown
+              id="unidade"
+              [options]="unidades"
+              optionLabel="item"
+              class="p-inputtext-sm"
+            ></p-dropdown>
+          </div>
+          <div>
+            <label for="producao">Produção</label>
+            <p-dropdown
+              id="producao"
+              [options]="producao"
+              optionLabel="item"
+              class="p-inputtext-sm"
+            ></p-dropdown>
+          </div>
+          <div>
+            <label for="itensPorCaixa">Itens Por Caixa</label>
+            <input
+              type="number"
+              id="itensPorCaixa"
+              formControlName="itensPorCaixa"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="dataDeValidade">Data de Validade</label>
+            <p-calendar
+              id="datadeValidade"
+              [showIcon]="true"
+              class="p-inputtext-sm"
+            ></p-calendar>
+          </div>
+          <div>
+            <label for="gtin">GTIN</label>
+            <input
+              type="text"
+              id="gtin"
+              formControlName="gtin"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="gtinTributario">GTIN Tributátio</label>
+            <input
+              type="text"
+              id="gtinTributario"
+              formControlName="gtinTributario"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="descricao">Descrição</label>
+            <textarea
+              id="descricao"
+              formControlName="descricao"
+              pInputTextarea
+              rows="5"
+              cols="30"
+            ></textarea>
+          </div>
+        </div>
+      </p-accordionTab>
+
+      <p-accordionTab header="Tamanho da mercadoria">
+        <div class="container-tamanho">
+          <div>
+            <label for="pesoLiquido">Peso Líquido</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="pesoLiquido"
+              formControlName="pesoLiquido"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="pesoBruto">Peso Bruto</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="pesoBruto"
+              formControlName="pesoBruto"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="largura">Largura</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="largura"
+              formControlName="largura"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="comprimento">Comprimento</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="comprimento"
+              formControlName="comprimento"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="altura">Altura</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="altura"
+              formControlName="altura"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="unidadesTamanho">Unidade de Tamanho</label>
+            <p-dropdown
+              id="unidadesTamanho"
+              [options]="unidadeTamanho"
+              optionLabel="item"
+              class="p-inputtext-sm"
+            ></p-dropdown>
+          </div>
+        </div>
+      </p-accordionTab>
+
+      <p-accordionTab header="Informações sobre o Estoque">
+        <div class="container-estoque">
+          <div>
+            <label for="estoqueMinimo">Estoque Minimo</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="estoqueMinimo"
+              formControlName="estoqueMinimo"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="estoqueMaximo">Estoque Máximo</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="estoqueMaximo"
+              formControlName="estoqueMaximo"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="diasCrossdocking">Dias de CrossDocking</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="diasCrossdocking"
+              formControlName="diasCrossdocking"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+        </div>
+      </p-accordionTab>
+
+      <p-accordionTab header="Informações Tributárias">
+        <div class="container-tributario">
+          <div>
+            <label for="origem">Origem</label>
+            <input
+              type="text"
+              id="origem"
+              formControlName="origem"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="ncm">NCM</label>
+            <input
+              type="text"
+              id="ncm"
+              formControlName="ncm"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="cest">CEST</label>
+            <input
+              type="text"
+              id="cest"
+              formControlName="cest"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="tipoItem">Tipo do Item</label>
+            <input
+              type="text"
+              id="tipoItem"
+              formControlName="tipoItem"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="aliquotaTributo">Aliquota do Tributo</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="aliquotaTributo"
+              formControlName="aliquotaTributo"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="icmsBaseRetencao">ICMS base Retenção</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="icmsBaseRetencao"
+              formControlName="icmsBaseRetencao"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="icmsStBaseRetencao">ICMS ST Retenção</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="icmsStBaseRetencao"
+              formControlName="icmsStBaseRetencao"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="icmsProprio">ICMS ST Retenção</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="icmsProprio"
+              formControlName="icmsProprio"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="pisFixo">PIS Fixo</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="pisFixo"
+              formControlName="pisFixo"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+          <div>
+            <label for="cofinsFixo">COFINS Fixo</label>
+            <input
+              placeholder="0,00"
+              type="number"
+              id="cofinsFixo"
+              formControlName="cofinsFixo"
+              pInputText
+              class="p-inputtext-sm"
+            />
+          </div>
+        </div>
+      </p-accordionTab>
+    </p-accordion>
+  </div>
+
+  <div class="botoes">
+    <button
+      type="submit"
+      [disabled]="!form.valid"
+      pButton
+      pRipple
+      class="p-button-success"
+    >
+      Enviar
+    </button>
+    <button type="button" pButton pRipple class="p-button-secondary">
+      Cancelar
+    </button>
+  </div>
+</form>

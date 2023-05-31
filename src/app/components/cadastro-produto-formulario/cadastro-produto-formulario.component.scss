@@ -1,0 +1,67 @@
+.form-body {
+  background-color: white;
+  border-radius: 14px;
+}
+
+.container-basico {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem
+}
+
+.container-basico > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem
+}
+
+.container-tamanho {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem
+}
+
+.container-tamanho div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem
+}
+
+.container-estoque {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem
+}
+
+.container-estoque div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem
+}
+
+.container-tributario {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem
+}
+
+.container-tributario div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem
+}
+
+.botoes {
+  display: grid;
+  grid-template-columns: repeat(24, 1fr);
+}
+
+.botoes {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-around;
+}
+
+textarea {
+  max-width: 20rem;
+}

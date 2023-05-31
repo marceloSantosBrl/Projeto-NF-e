@@ -15,6 +15,9 @@ const routes: Routes = [
   {path: 'estoque-estornos', loadComponent: () =>
       import('src/app/pages/inventory-reversals/inventory-reversals.component')
         .then(m => m.InventoryReversalsComponent)},
+  {path: 'cadastro-produto', loadComponent: () =>
+      import('src/app/pages/cadastro-produto/cadastro-produto.component')
+        .then(m => m.CadastroProdutoComponent)},
 ];
 
 @NgModule({
