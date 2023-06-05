@@ -12,27 +12,30 @@
               pInputText
               class="p-inputtext-sm"
             />
+            <p class="p-error" [ngClass]="{'hidden': !validation(form.controls.nome)}">Nome Inválido</p>
           </div>
           <div>
             <label for="tipo">Tipo</label>
             <p-dropdown
               id="tipo"
               [options]="Tipo"
-              optionLabel="tipo"
+              optionLabel="item"
               class="p-inputtext-sm"
+              formControlName="tipo"
             ></p-dropdown>
           </div>
           <div>
             <label for="precoDeVenda">Preço de venda</label>
             <div class="p-inputgroup">
-              <input  placeholder="0,00"
-              type="number"
-              id="precoDeVenda"
-              formControlName="precoDeVenda"
-              pInputText
-              class="p-inputtext-sm"/>
+              <input placeholder="0,00"
+                     type="number"
+                     id="precoDeVenda"
+                     formControlName="precoDeVenda"
+                     pInputText
+                     class="p-inputtext-sm"/>
               <span class="p-inputgroup-addon"> R$ </span>
             </div>
+            <!-- <p class="p-error" [ngClass]="{'hidden': !validation(form.controls.precoDeVenda)}">Preço Inválido</p> -->
           </div>
           <div>
             <label for="marca">Marca</label>
@@ -43,6 +46,7 @@
               pInputText
               class="p-inputtext-sm"
             />
+            <!-- <p class="p-error" [ngClass]="{'hidden': !validation(form.controls.marca)}">Marca Inválida</p> -->
           </div>
           <div>
             <label for="unidade">Unidade</label>
@@ -51,6 +55,7 @@
               [options]="unidades"
               optionLabel="item"
               class="p-inputtext-sm"
+              formControlName="unidade"
             ></p-dropdown>
           </div>
           <div>
@@ -60,6 +65,7 @@
               [options]="producao"
               optionLabel="item"
               class="p-inputtext-sm"
+              formControlName="producao"
             ></p-dropdown>
           </div>
           <div>
@@ -68,6 +74,7 @@
               type="number"
               id="itensPorCaixa"
               formControlName="itensPorCaixa"
+              placeholder="0,00"
               pInputText
               class="p-inputtext-sm"
             />
@@ -78,6 +85,7 @@
               id="datadeValidade"
               [showIcon]="true"
               class="p-inputtext-sm"
+              formControlName="dataDeValidade"
             ></p-calendar>
           </div>
           <div>
@@ -125,6 +133,7 @@
               pInputText
               class="p-inputtext-sm"
             />
+            <p>{{form.controls.pesoLiquido.value}}</p>
           </div>
           <div>
             <label for="pesoBruto">Peso Bruto</label>
@@ -171,12 +180,13 @@
             />
           </div>
           <div>
-            <label for="unidadesTamanho">Unidade de Tamanho</label>
+            <label for="unidadeTamanho">Unidade de Tamanho</label>
             <p-dropdown
-              id="unidadesTamanho"
+              id="unidadeTamanho"
               [options]="unidadeTamanho"
               optionLabel="item"
               class="p-inputtext-sm"
+              formControlName="unidadeTamanho"
             ></p-dropdown>
           </div>
         </div>
@@ -335,11 +345,11 @@
 
   <div class="botoes">
     <button
-      type="submit"
-      [disabled]="!form.valid"
-      pButton
-      pRipple
-      class="p-button-success"
+    type="submit"
+    pButton
+    pRipple
+    class="p-button-success"
+    [disabled]="!form.valid"
     >
       Enviar
     </button>

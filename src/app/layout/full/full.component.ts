@@ -51,7 +51,9 @@ export class FullComponent implements OnInit{
         icon: 'pi pi-fw pi-shopping-cart',
         items: [
           {label: 'Listagem de vendas'},
-          {label: 'Estorno de vendas'}
+          {label: 'Estorno de vendas'},
+          {label: 'Cadastrar vendas', routerLink: '/cadastro-venda'}
+
         ]
       },
       {

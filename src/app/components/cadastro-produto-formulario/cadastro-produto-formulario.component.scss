@@ -65,3 +65,15 @@
 textarea {
   max-width: 20rem;
 }
+
+input:focus.ng-dirty.ng-invalid {
+  box-shadow: none;
+}
+
+.p-error{
+  font-size: 0.9rem;
+}
+
+.hidden {
+  visibility: hidden;
+}
