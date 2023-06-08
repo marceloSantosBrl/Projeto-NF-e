@@ -1,0 +1,23 @@
+<div class="main-container">
+  <ul class="visor-container">
+    <p>Nome do Produto</p>
+    <p>Valor Unitário</p>
+    <p>Quantidade</p>
+    <p>Total</p>
+    <p></p>
+    <ng-container *ngFor="let item of visorConcreto" class="visor-element">
+      <p>{{item.nomeProduto}}</p>
+      <p>{{item.valorUnitario}}</p>
+      <p>{{item.quantidade}}</p>
+      <p>{{item.total}}</p>
+      <button><i class="pi pi-trash"></i></button>
+      <hr style="grid-column: 1 / 6">
+    </ng-container>
+  </ul>
+  <form [formGroup] = "formulario" (ngSubmit)="clickHandler()" class="form-container">
+    <input type="text" id="nomeProduto" formControlName="nomeProduto">
+    <input type="number" id="valorUnitario" formControlName="valorUnitario">
+    <input type="number" id="quantidade" formControlName="quantidade">
+    <button type="submit">Enviar</button>
+  </form>
+</div>
