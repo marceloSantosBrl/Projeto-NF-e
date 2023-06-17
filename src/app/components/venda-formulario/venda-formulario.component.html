@@ -1,38 +1,57 @@
-<form>
-    <div class="form-top-container">
-        <div class="input-container">
-            <label for="cliente">Cliente</label>
-            <input type="text" id="cliente">
-        </div>
-        <div class="input-container">
-            <label for="dataDeVenda">Data de Venda</label>
-            <input type="date" id="dataDeVenda">
-        </div>
-        <div class="input-container">
-            <label for="categoriaFinanceira">Categoria Financeira</label>
-            <input type="text" id="categoriaFinanceira">
-        </div>
-        <div class="input-container">
-            <label for="vendedor">Vendedor</label>
-            <input type="text" id="vendedor">
-        </div>
-    </div>
-    <!--  -->
-    <label for="produto">Produto</label>
-    <input type="text" id="produto">
-    <label for="quantidade">Quantidade</label>
-    <input type="number" id="quantidade">
-    <label for="desconto">Desconto</label>
-    <!--  -->
-    <input type="number" id="desconto">
+<form [formGroup]="formulario" (ngSubmit)="clickHandler()">
+  <div class="input-container">
+    <label for="cliente">Cliente</label>
+    <input pInputText type="text" id="cliente" class="p-inputtext-sm" formControlName="cliente"/>
+  </div>
+  <div class="input-container">
+    <label for="dataDeVenda">Data de Venda</label>
+    <p-calendar id="dataDeVenda" [showIcon]="true" formControlName="dataDeVenda"></p-calendar>
+  </div>
+  <div class="input-container">
+    <label for="categoriaFinanceira">Categoria Financeira</label>
+    <input
+      pInputText
+      type="text"
+      id="categoriaFinanceira"
+      class="p-inputtext-sm"
+      formControlName="categoriaFinanceira"
+    />
+  </div>
+  <div class="input-container">
+    <label for="vendedor">Vendedor</label>
+    <input pInputText type="text" id="vendedor" class="p-inputtext-sm" formControlName="vendedor"/>
+  </div>
+  <!--  -->
+  <div class="input-container">
     <label for="frete">Frete</label>
-    <input type="number" id="frete">
+    <input pInputText type="number" id="frete" class="p-inputtext-sm" formControlName="frete"/>
+  </div>
+  <div class="input-container">
     <label for="natureza">Natureza</label>
-    <input type="text" id="natureza">
+    <input pInputText type="text" id="natureza" class="p-inputtext-sm" formControlName="natureza"/>
+  </div>
+  <p
+    class="p-error"
+    [ngClass]="{
+        'd-none': !validacao(formulario.controls.natureza)
+      }"
+  >
+    Natureza Inválida
+  </p>
+  <div class="input-container">
     <label for="formaPagamento">Forma de Pagamento</label>
-    <input type="text" id="formaPagamento">
+    <input pInputText type="text" id="formaPagamento" class="p-inputtext-sm" formControlName="formaPagamento"/>
+  </div>
+  <div class="input-container">
     <label for="numeroParcelas">Número de Parcelas</label>
-    <input type="number" id="numeroParcelas">
-    <label for="vencimentoPrimeiraParcela">Vencimento da Primeira Parcela</label>
-    <input type="date" id="vencimentoPrimeiraParcela">
+    <input
+      pInputText
+      type="number"
+      id="numeroParcelas"
+      class="p-inputtext-sm"
+      formControlName="numeroParcelas"
+    />
+  </div>
+  <button pButton pRipple label="Enviar" class="p-button-success"
+          [disabled]="formulario.invalid"></button>
 </form>

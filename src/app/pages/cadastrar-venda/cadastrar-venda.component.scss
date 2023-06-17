@@ -1,0 +1,11 @@
+.main-container {
+    display: grid;
+    grid-template-columns: 5% 90% 5%;
+}
+
+app-venda-carrinho,
+app-venda-formulario 
+{
+    margin-top: 2rem;
+    grid-column-start: 2;
+}

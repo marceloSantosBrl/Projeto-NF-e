@@ -1,6 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeicons/primeicons.css";
-@import "assets/theme.css";
+@import "primeng/resources/themes/soho-light/theme.css";
 @import "primeng/resources/primeng.css";
 body {
   font-family: var(--font-family);
@@ -14,12 +14,22 @@ body {
 */
 * {
   margin: 0;
+  font-size: 14px;
 }
 /*
   3. Allow percentage-based heights in the application
 */
 html, body {
   height: 100%;
+}
+
+thead tr th:nth-child(1){
+  border-radius: 1rem 0 0 0 !important;
+}
+
+thead tr th:nth-last-child(1) {
+  border-radius: 0 1rem 0 0 !important;
+
 }
 
 .p-card {
