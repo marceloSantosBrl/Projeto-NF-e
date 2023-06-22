@@ -23,7 +23,6 @@ export class FullComponent implements OnInit{
       {label: 'sair'},
       {label: 'sobre'}
     ]
-
     this.items = [
       {
         label: 'Estoques',
@@ -40,6 +39,7 @@ export class FullComponent implements OnInit{
           {label: 'Clientes'},
           {label: 'Fornecedores'},
           {label: 'Vendedores'},
+          {label: 'Cadastro Clientes', routerLink: '/cadastro-cliente'}
         ]
       },
       {
@@ -50,7 +50,7 @@ export class FullComponent implements OnInit{
         label: 'Vendas',
         icon: 'pi pi-fw pi-shopping-cart',
         items: [
-          {label: 'Listagem de vendas'},
+          {label: 'Listagem de vendas', routerLink: '/listagem-venda'},
           {label: 'Estorno de vendas'},
           {label: 'Cadastrar vendas', routerLink: '/cadastro-venda'}
 

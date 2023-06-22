@@ -14,7 +14,7 @@ import { InputTextareaModule } from 'primeng/inputtextarea';
 import { AccordionModule } from 'primeng/accordion';
 import { RippleModule } from 'primeng/ripple';
 import { ValidationInteractivity } from '../../classes/ValidationInteractivity';
-import { biggerThanZero } from 'src/app/Functions/CustomValidators';
+import { biggerThanZero } from 'src/app/functions/CustomValidators';
 import { IDropdownElement } from 'src/app/models/idropdown-element';
 
 @Component({

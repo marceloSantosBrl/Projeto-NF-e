@@ -12,5 +12,4 @@ import { FullComponent } from "../../layout/full/full.component";
     imports: [CommonModule, VendaFormularioComponent, VendaCarrinhoComponent, FullComponent]
 })
 export class CadastrarVendaComponent {
-
 }

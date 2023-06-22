@@ -1,0 +1,95 @@
+<app-full>
+  <div class="page-container">
+    <form [formGroup]="formulario">
+      <!-- Informações Princiapis-->
+      <div class="container-principal">
+        <h2>Informaçoes Básicas</h2>
+        <div class="input-element">
+          <label for="nome">Nome*</label>
+          <input pInputText type="text" id="nome" formControlName="nome" class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="fantasia">Fantasia</label>
+          <input pInputText type="text" id="fantasia" formControlName="fantasia" class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="tipoPessoa">Tipo de Pessoa</label>
+          <p-dropdown id="tipoPessoa"
+                      formControlName="tipoPessoa"
+                      [options]="tipoPessoaOpcoes"
+                      optionLabel="opcao"
+                      class="p-inputtext-sm"></p-dropdown>
+        </div>
+        <div class="input-element">
+          <label for="cnpj">CNPJ</label>
+          <input pInputText type="number" id="cnpj" formControlName="cnpj" class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="cpf">CPF*</label>
+          <input pInputText type="number" id="cpf" formControlName="cpf" class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="inscricaoEstadual">Inscrição Estadual</label>
+          <input pInputText type="number" id="inscricaoEstadual" formControlName="inscricaoEstadual"
+                 class="p-inputtext-sm">
+        </div>
+      </div>
+      <!--  Informações Endereço-->
+      <div class="container-address">
+        <h2>Endereço*</h2>
+        <div class="input-element">
+          <label for="rua">Rua</label>
+          <input pInputText type="text" id="rua" formControlName="rua"
+                 class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="cep">CEP</label>
+          <input pInputText type="text" id="cep" formControlName="cep"
+                 class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="cidade">Cidade</label>
+          <input pInputText type="text" id="cidade" formControlName="cidade"
+                 class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="bairro">Bairro</label>
+          <input pInputText type="text" id="bairro" formControlName="bairro"
+                 class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="numero">Numero</label>
+          <input pInputText type="number" id="numero" formControlName="numero"
+                 class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="complemento">Complemento</label>
+          <input pInputText type="number" id="complemento" formControlName="complemento"
+                 class="p-inputtext-sm">
+        </div>
+      </div>
+      <!--  Informações Contato-->
+      <div class="container-contact">
+        <h2>Endereço</h2>
+        <div class="input-element">
+          <label for="informacoesContato">Informações do Contato</label>
+          <input pInputText type="text" id="informacoesContato" formControlName="inscricaoEstadual"
+                 class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="telefone">Telefone</label>
+          <input pInputText type="number" id="telefone" formControlName="telefone" class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="celular">Celular</label>
+          <input pInputText type="number" id="celular" formControlName="number" class="p-inputtext-sm">
+        </div>
+        <div class="input-element">
+          <label for="email">Email</label>
+          <input pInputText type="email" id="email" formControlName="email" class="p-inputtext-sm">
+        </div>
+        <p-button [disabled]="formulario.invalid">Enviar</p-button>
+      </div>
+    </form>
+  </div>
+</app-full>
