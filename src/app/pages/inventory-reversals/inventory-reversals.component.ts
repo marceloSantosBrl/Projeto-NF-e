@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {TabMenuComponent} from "../../components/tab-menu/tab-menu.component";
-import { ReversalTableComponent } from "../../components/reversal-table/reversal-table.component";
+import {TabMenuComponent} from "../../shared-components/tab-menu/tab-menu.component";
+import { ReversalTableComponent } from "./components/reversal-table/reversal-table.component";
 import { FullComponent } from "../../layout/full/full.component";
 import {ButtonModule} from "primeng/button";
 import {RippleModule} from "primeng/ripple";

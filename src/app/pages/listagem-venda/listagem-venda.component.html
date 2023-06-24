@@ -1,39 +1,41 @@
 <app-full>
-    <div class="header">
-        <h1>Vendas</h1>
-        <div class="header-botoes">
-            <p-button styleClass="p-button-danger">Estornar Venda</p-button>
-            <p-button>Cadastrar venda</p-button>
+    <div class="main-container">
+        <div class="card">
+            <div class="header">
+                <h1>Vendas</h1>
+                <div class="header-botoes">
+                    <p-button styleClass="p-button-danger">Estornar Venda</p-button>
+                    <p-button (onClick)="handleCadastroClick()">Cadastrar venda</p-button>
+                </div>
+            </div>
+            <p-table 
+            [value]="mockData" 
+            [tableStyle]="{ 'min-width': '50rem' }"
+            [rowHover]="true"
+            [paginator]="true"
+            [rows]="10"
+            [showCurrentPageReport]="true"
+            currentPageReportTemplate="Mostrando venda {first} a {last} de um total de {totalRecords} vendas"
+            [rowsPerPageOptions]="[10,25,50]">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="data">Data<p-sortIcon field="code"></p-sortIcon></th>
+                        <th pSortableColumn="numero">Número<p-sortIcon field="numero"></p-sortIcon></th>
+                        <th pSortableColumn="cliente">Cliente<p-sortIcon field="cliente"></p-sortIcon></th>
+                        <th pSortableColumn="valor">Valor<p-sortIcon field="valor"></p-sortIcon></th>
+                        <th pSortableColumn="situacao">Situação<p-sortIcon field="situacao"></p-sortIcon></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-data>
+                    <tr (click)="handleClick(data.numero)" >
+                        <td>{{ data.data | date: 'dd/MM/yy' }}</td>
+                        <td>{{ data.numero }}</td>
+                        <td>{{ data.cliente }}</td>
+                        <td>{{ data.valor | currency: 'BRL'}}</td>
+                        <td>{{ data.situacao }}</td>
+                    </tr>
+                </ng-template>
+            </p-table>
         </div>
-    </div>
-    <div class="container-table">
-        <p-table 
-        [value]="mockData" 
-        [tableStyle]="{ 'min-width': '50rem' }"
-        [rowHover]="true"
-        [paginator]="true"
-        [rows]="10"
-        [showCurrentPageReport]="true"
-        currentPageReportTemplate="Mostrando venda {first} a {last} de um total de {totalRecords} vendas"
-        [rowsPerPageOptions]="[10,25,50]">
-            <ng-template pTemplate="header">
-                <tr>
-                    <th pSortableColumn="data">Data<p-sortIcon field="code"></p-sortIcon></th>
-                    <th pSortableColumn="numero">Número<p-sortIcon field="numero"></p-sortIcon></th>
-                    <th pSortableColumn="cliente">Cliente<p-sortIcon field="cliente"></p-sortIcon></th>
-                    <th pSortableColumn="valor">Valor<p-sortIcon field="valor"></p-sortIcon></th>
-                    <th pSortableColumn="situacao">Situacao<p-sortIcon field="situacao"></p-sortIcon></th>
-                </tr>
-            </ng-template>
-            <ng-template pTemplate="body" let-data>
-                <tr (click)="handleClick(data.numero)" >
-                    <td>{{ data.data | date: 'dd/mm/yy' }}</td>
-                    <td>{{ data.numero }}</td>
-                    <td>{{ data.cliente }}</td>
-                    <td>{{ data.valor | currency: 'BRL'}}</td>
-                    <td>{{ data.situacao }}</td>
-                </tr>
-            </ng-template>
-        </p-table>
     </div>
 </app-full>

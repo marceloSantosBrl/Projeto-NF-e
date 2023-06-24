@@ -2,8 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {CommonModule} from '@angular/common';
 import {MenubarModule} from "primeng/menubar";
 import {MenuItem} from "primeng/api";
-import {HomeCardComponent} from "../../components/home/home-card/home-card.component";
-import {HomeTableComponent} from "../../components/home/home-table/home-table.component";
+import {HomeCardComponent} from "../../pages/home/components/home-card/home-card.component";
+import {HomeTableComponent} from "../../pages/home/components/home-table/home-table.component";
 import { ButtonModule } from 'primeng/button';
 import {MenuModule} from "primeng/menu";
 @Component({
@@ -29,16 +29,16 @@ export class FullComponent implements OnInit{
         icon: 'pi pi-fw pi-truck',
         items: [
           {label: 'Cadastrar Produto', routerLink: '/cadastro-produto'},
-          {label: 'Listagem de Estoque'},
+          {label: 'Listagem de Estoque', routerLink: '/listagem-estoque'},
         ]
       },
       {
         label: 'Pessoas',
         icon: 'pi pi-fw pi-users',
         items: [
-          {label: 'Clientes'},
-          {label: 'Fornecedores'},
-          {label: 'Vendedores'},
+          {label: 'Clientes', routerLink: '/listagem-cliente'},
+          // {label: 'Fornecedores'},
+          // {label: 'Vendedores'},
           {label: 'Cadastro Clientes', routerLink: '/cadastro-cliente'}
         ]
       },
@@ -51,14 +51,16 @@ export class FullComponent implements OnInit{
         icon: 'pi pi-fw pi-shopping-cart',
         items: [
           {label: 'Listagem de vendas', routerLink: '/listagem-venda'},
-          {label: 'Estorno de vendas'},
+          // {label: 'Estorno de vendas'},
           {label: 'Cadastrar vendas', routerLink: '/cadastro-venda'}
-
         ]
       },
       {
         label: 'Relatórios',
-        icon: 'pi pi-fw pi-chart-line'
+        icon: 'pi pi-fw pi-chart-line',
+        items: [
+          {label: 'Dashboard', routerLink: '/home'}
+        ]
       },
     ];
   }

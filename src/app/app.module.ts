@@ -9,7 +9,7 @@ import {InventorySalesComponent} from "./pages/inventory-sales/inventory-sales.c
 import {InventoryTotalComponent} from "./pages/inventory-total/inventory-total.component";
 import { InventoryReversalsComponent } from './pages/inventory-reversals/inventory-reversals.component';
 import {HomeComponent} from "./pages/home/home.component";
-import {VendaCarrinhoComponent} from "./components/venda-carrinho/venda-carrinho.component";
+import {VendaCarrinhoComponent} from "./pages/cadastrar-venda/components/venda-carrinho/venda-carrinho.component";
 @NgModule({
   declarations: [
     AppComponent,

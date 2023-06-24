@@ -2,17 +2,17 @@
   <main class="main-container">
     <div class="header-container">
       <h1>Vendas Realizadas</h1>
-      <button pButton pRipple class="p-button-primary">Cadastrar Produto</button>
-      <button pButton pRipple class="p-button-primary">Cadastrar Venda</button>
+      <button pButton pRipple class="p-button-primary" (click)="handleProdutoClick()">Cadastrar Produto</button>
+      <button pButton pRipple class="p-button-primary" (click)="handleProdutoClick()">Cadastrar Venda</button>
     </div>
     <div class="cards-container">
       <app-home-card class="home-card"></app-home-card>
       <app-home-card class="home-card"></app-home-card>
       <app-home-card class="home-card"></app-home-card>
     </div>
-    <h2>Entrada em Caixa</h2>
     <div class="table-container">
-      <app-home-table></app-home-table>
+      <h2>Entrada em Caixa</h2>
+        <app-home-table></app-home-table>
     </div>
   </main>
 </app-full>

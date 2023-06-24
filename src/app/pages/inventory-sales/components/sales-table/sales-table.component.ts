@@ -1,7 +1,7 @@
 import {Component, Input} from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {TableModule} from "primeng/table";
-import {IInventorySaleRow} from "../../../models/i-inventory-sale-row";
+import {IInventorySaleRow} from "../../../../models/i-inventory-sale-row";
 
 @Component({
   selector: 'app-sales-table',

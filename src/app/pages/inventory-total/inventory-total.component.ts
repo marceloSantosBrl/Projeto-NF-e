@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {TabMenuComponent} from "../../components/tab-menu/tab-menu.component";
-import {TotalTableComponent} from "../../components/total-table/total-table.component";
+import {TabMenuComponent} from "../../shared-components/tab-menu/tab-menu.component";
+import {TotalTableComponent} from "./components/total-table/total-table.component";
 import {FullComponent} from "../../layout/full/full.component";
 
 @Component({

@@ -4,7 +4,7 @@ import { InputTextModule } from 'primeng/inputtext';
 import { CalendarModule } from 'primeng/calendar';
 import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
 import { ButtonModule } from 'primeng/button';
-import {ValidationInteractivity} from "../../classes/ValidationInteractivity";
+import {ValidationInteractivity} from "../../../../classes/ValidationInteractivity";
 import {RippleModule} from "primeng/ripple";
 
 @Component({

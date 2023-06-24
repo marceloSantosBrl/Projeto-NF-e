@@ -44,17 +44,32 @@ const routes: Routes = [
       ),
   },
   {
-    path:'cadastro-cliente',
-    loadComponent: () => 
-      import('src/app/pages/cadastro-cliente/cadastro-cliente.component')
-      .then(m => m.CadastroClienteComponent),
+    path: 'cadastro-cliente',
+    loadComponent: () =>
+      import('src/app/pages/cadastro-cliente/cadastro-cliente.component').then(
+        (m) => m.CadastroClienteComponent
+      ),
   },
   {
     path: 'listagem-venda',
-    loadComponent: () => 
-      import('src/app/pages/listagem-venda/listagem-venda.component')
-      .then(m => m.ListagemVendaComponent),
-  }
+    loadComponent: () =>
+      import('src/app/pages/listagem-venda/listagem-venda.component').then(
+        (m) => m.ListagemVendaComponent
+      ),
+  },
+  {
+    path: 'listagem-cliente',
+    loadComponent: () =>
+      import('src/app/pages/listagem-cliente/listagem-cliente.component').then(
+        (m) => m.ListagemClienteComponent
+      ),
+  },
+  {
+    path: 'listagem-estoque',
+    loadComponent: () =>
+      import('src/app/pages/listagem-estoque/listagem-estoque.component')
+      .then(m => m.ListagemEstoqueComponent),
+  },
 ];
 
 @NgModule({

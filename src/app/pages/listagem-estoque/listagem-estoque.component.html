@@ -1,0 +1,38 @@
+<app-full>
+    <div class="container">
+        <div class="card">
+            <div class="header">
+                <h1>Estoque</h1>
+                <div class="header-botoes">
+                    <p-button (onClick)="handleCadastroClick()">Cadastrar Estoque</p-button>
+                </div>
+            </div>
+            <p-table 
+            [value]="mockData" 
+            [tableStyle]="{ 'min-width': '50rem' }"
+            [rowHover]="true"
+            [paginator]="true"
+            [rows]="10"
+            [showCurrentPageReport]="true"
+            currentPageReportTemplate="Mostrando venda {first} a {last} de um total de {totalRecords} vendas"
+            [rowsPerPageOptions]="[10,25,50]">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th pSortableColumn="nomeProduto">Nome do Produto<p-sortIcon field="nomeProduto"></p-sortIcon></th>
+                        <th pSortableColumn="valorUnitario">Valor Unitário<p-sortIcon field="valorUnitario"></p-sortIcon></th>
+                        <th pSortableColumn="quantidadeEstoque">Quantidade em Estoque<p-sortIcon field="quantidadeEstoque"></p-sortIcon></th>
+                        <th pSortableColumn="validade">Validade<p-sortIcon field="validade"></p-sortIcon></th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-data>
+                    <tr (click)="handleClick(data.numero)" >
+                        <td>{{ data.nomeProduto}}</td>
+                        <td>{{ data.valorUnitario | currency: 'BRL' }}</td>
+                        <td>{{ data.quantidadeEstoque }}</td>
+                        <td>{{ data.validade}} dias</td>
+                    </tr>
+                </ng-template>
+            </p-table>
+        </div>
+    </div>
+</app-full>

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import {TabMenuComponent} from "../../components/tab-menu/tab-menu.component";
+import {TabMenuComponent} from "../../shared-components/tab-menu/tab-menu.component";
 import {FullComponent} from "../../layout/full/full.component";
-import {SalesTableComponent} from "../../components/inventory-sales/sales-table/sales-table.component";
+import {SalesTableComponent} from "./components/sales-table/sales-table.component";
 
 @Component({
   selector: 'app-inventory-sales',
